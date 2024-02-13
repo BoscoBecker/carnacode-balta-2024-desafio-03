@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
       "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\manifest.webmanifest",
       "PackagePath": "staticwebassets\\manifest.webmanifest"
     },

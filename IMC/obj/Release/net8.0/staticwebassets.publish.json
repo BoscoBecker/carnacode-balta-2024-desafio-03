@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EFnk2ghMYRVi3VuqN9NCNghiaJt5MkhPUB92MWdqyd8=",
+  "Hash": "TmVtV1jkxczFFy9CM3crR6Hr/YxJJGmuvFCcuHkdBTs=",
   "Source": "IMC",
   "BasePath": "_content/IMC",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\manifest.json",
+      "SourceId": "IMC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\",
+      "BasePath": "_content/IMC",
+      "RelativePath": "manifest.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\manifest.json"
     },
     {
       "Identity": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\manifest.webmanifest",
