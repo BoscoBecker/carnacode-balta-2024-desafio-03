@@ -1,0 +1,110 @@
+﻿@page "/history"
+
+@using Microsoft.EntityFrameworkCore
+@using IMC.Services
+@inject ServicesIMC ServicesIMC
+
+
+
+<div class="content-blocks">
+    <div>
+        <img src="assets/icon-no-bg.png" class="imghistory">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Historico</h1>
+        <div class="centerhistory">
+            <input class="input-text-search" type="text" placeholder="  Pesquisar..." />
+        </div>
+    </div>
+
+    @if (imcResults.Count > 0)
+    {
+        @foreach (var result in imcResults)
+        {
+            @*<div class="content-block-small">
+                <div class="content-content-block"></div>
+                <div class="header">IMC: @ClassificarIMC(result.Item1)</div>
+                <div class="content-block2">@result.Item2.ToString("dd/MM/yyyy")</div>
+                <div class="content-block-text">@ObterMensagem(result.Item1)</div>
+                <div class="divider-line"></div>
+              </div> 
+            *@
+
+            @if (result.Item1 > 30)
+            {
+                <div class="content-content-block-small2">
+                    <div class="content-block2"></div>
+                    <div class="header">IMC:@ClassificarIMC(result.Item1)</div>
+                    <div class="_8-m-ago2">@result.Item2.ToString("dd/MM/yyyy")</div>
+                    <div class="he-ll-want-to-use-your-yacht-and-i-don-t-want-this-thing-smelling-like-fish">
+                        @ObterMensagem(result.Item1)
+                    </div>
+                    <div class="divider-line2"></div>
+                </div>
+            }
+
+            else
+            
+            {
+                <div class="content-content-block-small">
+                    <div class="content-block"></div>
+                    <div class="header">IMC: @ClassificarIMC(result.Item1)</div>
+                    <div class="_8-m-ago">@result.Item2.ToString("dd/MM/yyyy")</div>
+                    <div class="he-ll-want-to-use-your-yacht-and-i-don-t-want-this-thing-smelling-like-fish">
+                        @ObterMensagem(result.Item1)
+                    </div>
+                    <div class="divider-line"></div>
+                </div>
+            }
+        }
+     
+    }
+    else {<p>Nenhum resultado disponível.</p>}
+
+
+</div>
+
+
+
+@code {
+    List<(double, DateTime)> imcResults = new List<(double, DateTime)>();
+
+    protected override void OnInitialized()
+    {
+        imcResults.AddRange(ServicesIMC.GetIMCASResults().OrderByDescending(x => x.Item2));
+    }
+
+    string ClassificarIMC(double imc)
+    {
+        if (imc < 18.5)
+            return "Abaixo do peso ✅";
+        else if (imc < 24.9)
+            return "Peso normal ✅";
+        else if (imc < 29.9)
+            return "Sobrepeso ❗";
+        else if (imc < 34.9)
+            return "Obesidade grau I ❗";
+        else if (imc < 39.9)
+            return "Obesidade grau II ❗";
+        else
+            return "Obesidade grau III (mórbida) ❗";
+    }
+
+    string ObterMensagem(double imc)
+    {
+        if (imc < 18.5)
+            return "Você está abaixo do peso.";
+        else if (imc < 24.9)
+            return "Parabéns, você está com o peso normal!";
+        else if (imc < 29.9)
+            return "Cuidado, você está com sobrepeso!";
+        else if (imc < 34.9)
+            return "Atenção, você está com obesidade grau I.";
+        else if (imc < 39.9)
+            return "Cuidado, você está com obesidade grau II.";
+        else
+            return "Alerta! Você está com obesidade grau III (mórbida).";
+    }
+}

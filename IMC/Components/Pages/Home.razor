@@ -1,0 +1,80 @@
+﻿@page "/"
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.EntityFrameworkCore;
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@using IMC.Services
+@inject ServicesIMC ServicesIMC
+@inject NavigationManager Navigation
+
+
+@rendermode InteractiveServer
+
+<PageTitle>IMC</PageTitle>
+
+<div class="container">
+    <div>
+        <div>
+            <h1>Cálculo de IMC</h1>
+        </div>
+        <EditForm Model="@IMCModel" OnValidSubmit="HandleSalvar" >
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <ValidationSummary></ValidationSummary>
+            <div>
+                <InputText class="input-text" type="text" @bind-Value="IMCModel.Altura" placeholder=" Altura" />
+            </div>
+            <br>
+            <div>
+                <InputText type="input-text" class="input-text" @bind-Value="IMCModel.Peso" placeholder=" Peso" />
+            </div>
+            <br> 
+            <div>
+                <InputText type="input-text" class="input-text" @bind-Value="IMCModel.Sexo" placeholder=" Sexo" />
+            </div>
+            <br>
+            <div class="centerhistory">
+                <br>
+                <input class="input" id="ThirdAge" type="checkbox" />
+                <label for="ThirdAge" style="color:#BDBDBD;"> Eu tenho 65 anos ou mais</label>
+            </div>
+            <br>
+            <button type="submit"  class="buttoncalc">Calcular meu IMC</button><br />
+            <br>
+        </EditForm>
+        <button class="buttonentenda" onclick="location.href='entendaimc'">Entenda o Cálculo</button>
+    </div>
+ 
+</div>
+
+@code{
+
+    private double ImcValue { get; set; }
+    public EntitieIMC IMCModel { get; set; } = new EntitieIMC();
+    public class EntitieIMC
+    {
+        [Required]
+        public string Altura { get; set; }
+        [Required]
+        public string Peso { get; set; }
+        [Required]
+        public string Sexo { get; set; } = "";
+    }
+    public void HandleSalvar() => OnSaveIMCAsync(CalculaIMC());
+
+    private double CalculaIMC()
+    {
+        double alturaMetros = double.Parse(IMCModel.Altura);
+        double pesoKg = double.Parse(IMCModel.Peso);
+        double imc = pesoKg / (alturaMetros * alturaMetros);
+        ImcValue = imc;
+        return imc;
+    }
+
+    public void OnSaveIMCAsync(double value )
+    {
+        ServicesIMC.AddToList(ImcValue);
+        if (ImcValue <30 )
+            Navigation.NavigateTo("parabens");
+        else
+            Navigation.NavigateTo("sobrepeso");
+    }
+}

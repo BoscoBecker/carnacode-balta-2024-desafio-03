@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "hhttp",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "hhttp",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}

@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\IMC.bundle.scp.css",
+      "PackagePath": "staticwebassets\\IMC.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\assets\\app.fig",
+      "PackagePath": "staticwebassets\\assets\\app.fig"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\assets\\icon-no-bg.png",
+      "PackagePath": "staticwebassets\\assets\\icon-no-bg.png"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\assets\\icon.png",
+      "PackagePath": "staticwebassets\\assets\\icon.png"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\assets\\texto-para-publicacao-nas-redes-sociais.txt",
+      "PackagePath": "staticwebassets\\assets\\texto-para-publicacao-nas-redes-sociais.txt"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\service-worker.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "D:\\Projetos\\C#\\Carnaval\\carnacode-balta-2024-desafio-03\\IMC\\wwwroot\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.published.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.IMC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.IMC.props",
+      "PackagePath": "build\\IMC.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.IMC.props",
+      "PackagePath": "buildMultiTargeting\\IMC.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.IMC.props",
+      "PackagePath": "buildTransitive\\IMC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
