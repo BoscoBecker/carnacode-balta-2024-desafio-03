@@ -17,7 +17,5 @@ Neste segundo desafio, desenvolvemos uma aplicação completa para calcular o IM
 ### Ferramentas Utilizadas
 * Utilizado Microsoft Visual Studio community e dotnet 8.0.101
 
-![alt text](image.png)
-
 # Recompensa
 <img src="https://baltaio.blob.core.windows.net/temp/carnacode-badge-desafio-02.png" alt="CarnaCode 2024 - Segundo Desafio Completo" width="256" />
